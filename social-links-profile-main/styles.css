@@ -1,0 +1,51 @@
+body  {
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+#info {
+    border: 2px solid rgb(26, 23, 23);
+    border-radius: 10px;
+    background-color:rgb(26, 23, 23); 
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius:50%;
+}
+#id{
+    padding-bottom: 10px;
+}
+
+#location{
+    color: greenyellow;
+    margin-bottom: 30px;
+}
+
+#name{
+    margin:10px;
+}
+
+#discript{
+    color: rgb(185, 182, 182);
+}
+
+.social-links{
+    display:flex;
+    flex-direction: column;
+    width: 300px;
+}
+.social-links button {
+    margin: 5px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+}
+
