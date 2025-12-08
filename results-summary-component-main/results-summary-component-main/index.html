@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Results summary component</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-size: 18px;
+      background-color: hsl(221, 100%, 96%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      background: white;
+      border-radius: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      max-width: 700px;
+      width: 100%;
+    }
+
+    .container-left {
+      background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+      border-radius: 30px;
+      padding: 40px 50px;
+      text-align: center;
+      color: white;
+      flex: 1;
+    }
+
+    .result-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: hsl(241, 100%, 89%);
+      margin-bottom: 30px;
+    }
+
+    .score-circle {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 30px;
+    }
+
+    .score-number {
+      font-size: 70px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .score-total {
+      font-size: 18px;
+      color: hsl(241, 100%, 89%);
+      font-weight: 700;
+    }
+
+    .score-header {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .score-text {
+      font-size: 16px;
+      color: hsl(241, 100%, 89%);
+      max-width: 250px;
+      margin: 0 auto;
+    }
+
+    .container-right {
+      padding: 40px;
+      flex: 1;
+    }
+
+    .summary-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: hsl(224, 30%, 27%);
+      margin-bottom: 25px;
+    }
+
+    .summary-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .summary-item-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .summary-item img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .reaction {
+      background-color: hsla(0, 100%, 67%, 0.1);
+      color: hsl(0, 100%, 67%);
+    }
+
+    .memory {
+      background-color: hsla(39, 100%, 56%, 0.1);
+      color: hsl(39, 100%, 56%);
+    }
+
+    .verbal {
+      background-color: hsla(166, 100%, 37%, 0.1);
+      color: hsl(166, 100%, 37%);
+    }
+
+    .visual {
+      background-color: hsla(234, 85%, 45%, 0.1);
+      color: hsl(234, 85%, 45%);
+    }
+
+    .summary-item-name {
+      font-weight: 700;
+    }
+
+    .summary-item-score {
+      color: hsl(224, 30%, 27%);
+      font-weight: 700;
+    }
+
+    .summary-item-score span {
+      color: hsl(224, 30%, 50%);
+    }
+
+    .continue-button {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 30px;
+      background: hsl(224, 30%, 27%);
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+      font-family: 'Hanken Grotesk', sans-serif;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .continue-button:hover {
+      background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="container-left">
+      <div class="result-title">Your Result</div>
+      <div class="score-circle">
+        <div class="score-number">76</div>
+        <div class="score-total">of 100</div>
+      </div>
+      <div class="score-header">Great</div>
+      <div class="score-text">You scored higher than 65% of the people who have taken these tests.</div>
+    </div>
+
+    <div class="container-right">
+      <div class="summary-title">Summary</div>
+
+      <div class="summary-item reaction">
+        <div class="summary-item-left">
+          <img src="./assets/images/icon-reaction.svg" alt="Reaction">
+          <span class="summary-item-name">Reaction</span>
+        </div>
+        <div class="summary-item-score">80 <span>/ 100</span></div>
+      </div>
+
+      <div class="summary-item memory">
+        <div class="summary-item-left">
+          <img src="./assets/images/icon-memory.svg" alt="Memory">
+          <span class="summary-item-name">Memory</span>
+        </div>
+        <div class="summary-item-score">92 <span>/ 100</span></div>
+      </div>
+
+      <div class="summary-item verbal">
+        <div class="summary-item-left">
+          <img src="./assets/images/icon-verbal.svg" alt="Verbal">
+          <span class="summary-item-name">Verbal</span>
+        </div>
+        <div class="summary-item-score">61 <span>/ 100</span></div>
+      </div>
+
+      <div class="summary-item visual">
+        <div class="summary-item-left">
+          <img src="./assets/images/icon-visual.svg" alt="Visual">
+          <span class="summary-item-name">Visual</span>
+        </div>
+        <div class="summary-item-score">72 <span>/ 100</span></div>
+      </div>
+
+      <button class="continue-button">Continue</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
+</body>
+</html>
